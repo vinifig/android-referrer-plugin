@@ -23,11 +23,5 @@ public void onReceive(Context context, Intent intent) {
     Editor edit = sharedPreferences.edit();
     edit.putString("referrer", referrerString);
     edit.commit();
-/*
-     Intent i = new Intent(context, HelloCordova.class);
-      i.putExtra("hoodid", referrerString);
-      //context.startActivity(i);
-      */
-}
 
 }
