@@ -29,7 +29,7 @@ The value in the referrer text (`textinreferrer` above) will be stored as a stri
 
 To test that the install referrer event is received by the plugin in your emulator:
 * run `adb shell` 
-* `am broadcast -a com.android.vending.INSTALL_REFERRER -n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver   --es "referrer" "textinreferrer"`
+* ```am broadcast -a com.android.vending.INSTALL_REFERRER -n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver   --es "referrer" "textinreferrer"```
 
 
 ## Limits
