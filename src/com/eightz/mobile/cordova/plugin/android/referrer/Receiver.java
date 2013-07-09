@@ -23,5 +23,6 @@ public void onReceive(Context context, Intent intent) {
     Editor edit = sharedPreferences.edit();
     edit.putString("referrer", referrerString);
     edit.commit();
+}
 
 }
