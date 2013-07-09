@@ -24,5 +24,5 @@ public void onReceive(Context context, Intent intent) {
     edit.putString("referrer", referrerString);
     edit.commit();
 }
-
+ 
 }
