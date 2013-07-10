@@ -1,7 +1,7 @@
 android-referrer-plugin
 =======================
 
-This plugin captures the referrer when an android app is installed from a webpage and stores it in the applications shared preferences for later retrieval. 
+This plugin captures the referrer value passed when an android app is installed from a webpage and stores it in the applications shared preferences for later retrieval. 
 
 You'll typically want to use the [AppPreferences plugin](https://github.com/8zrealestate/AppPreferences) to pull the referrer value into your phonegap app for your javascript code to manipulate.
 
