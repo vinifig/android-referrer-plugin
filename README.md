@@ -33,7 +33,7 @@ run `adb shell` and then
 
 ```
 am broadcast -a com.android.vending.INSTALL_REFERRER \
--n <your package here>/.Receiver \
+-n <your package here>/com.eightz.mobile.cordova.plugin.android.referrer.Receiver \
 --es "referrer" "textinreferrer"
 ```
 
