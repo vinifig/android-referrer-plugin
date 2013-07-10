@@ -32,8 +32,8 @@ To test that the install referrer event is received by the plugin in your emulat
 run `adb shell` and then 
 
 ```
-am broadcast -a com.android.vending.INSTALL_REFERRER 
--n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver   
+am broadcast -a com.android.vending.INSTALL_REFERRER \
+-n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver \
 --es "referrer" "textinreferrer"
 ```
 
