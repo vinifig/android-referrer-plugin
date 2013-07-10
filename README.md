@@ -28,9 +28,14 @@ market://details?id=com.yourid.here&referrer=textinreferrer
 The value in the referrer text (`textinreferrer` above) will be stored as a string in your apps shared preferences object, under the key `referrer`.
 
 To test that the install referrer event is received by the plugin in your emulator:
-* run `adb shell` 
-* ```am broadcast -a com.android.vending.INSTALL_REFERRER \
--n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver   --es "referrer" "textinreferrer"```
+
+run `adb shell` and then 
+
+```
+am broadcast -a com.android.vending.INSTALL_REFERRER 
+-n com.eightz.mobile.cordova.plugin.android.referrer/.Receiver   
+--es "referrer" "textinreferrer"
+```
 
 
 ## Limits
