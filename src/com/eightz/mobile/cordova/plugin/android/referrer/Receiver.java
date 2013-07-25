@@ -17,12 +17,16 @@ public class Receiver extends BroadcastReceiver {
 public void onReceive(Context context, Intent intent) {
 
     Bundle extras = intent.getExtras();
-    String referrerString = extras.getString("referrer");
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    if (extras != null) {
+    	String referrerString = extras.getString("referrer");
+        if (referrerString != null) {
+    	    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
-    Editor edit = sharedPreferences.edit();
-    edit.putString("referrer", referrerString);
-    edit.commit();
+    	    Editor edit = sharedPreferences.edit();
+    	    edit.putString("referrer", referrerString);
+    	    edit.commit();
+        }
+    }
 }
  
-}
+} // end of class
