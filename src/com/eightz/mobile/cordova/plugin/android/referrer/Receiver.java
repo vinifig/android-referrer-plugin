@@ -15,14 +15,11 @@ public class Receiver extends BroadcastReceiver {
 
 @Override
 public void onReceive(Context context, Intent intent) {
-    Log.w("TEST","here1");
+
     Bundle extras = intent.getExtras();
-    Log.w("TEST","here2");
     if (extras != null) {
-    Log.w("TEST","here3");
     	String referrerString = extras.getString("referrer");
         if (referrerString != null) {
-    Log.w("TEST","here4");
     	    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
     	    Editor edit = sharedPreferences.edit();
@@ -30,7 +27,6 @@ public void onReceive(Context context, Intent intent) {
     	    edit.commit();
         }
     }
-    Log.w("TEST","here5");
 }
  
 } // end of class
