@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+import com.example.android.InstallReferrerReceiver;
 
 import android.util.Log;
 
@@ -19,6 +20,7 @@ public void onReceive(Context context, Intent intent) {
     Bundle extras = intent.getExtras();
     if (extras != null) {
     	String referrerString = extras.getString("referrer");
+    	Log.w("Vircities referrer", referrerString);
         if (referrerString != null) {
     	    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
@@ -27,6 +29,8 @@ public void onReceive(Context context, Intent intent) {
     	    edit.commit();
         }
     }
+    InstallReferrerReceiver referrerReceiver = new InstallReferrerReceiver();
+    referrerReceiver.onReceive(context, intent);
 }
  
 } // end of class
