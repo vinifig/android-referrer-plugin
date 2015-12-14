@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
-import com.example.android.InstallReferrerReceiver;
+import com.google.analytics.tracking.android.CampaignTrackingReceiver;
 
 import android.util.Log;
 
@@ -29,8 +29,7 @@ public void onReceive(Context context, Intent intent) {
     	    edit.commit();
         }
     }
-    InstallReferrerReceiver referrerReceiver = new InstallReferrerReceiver();
-    referrerReceiver.onReceive(context, intent);
+    new CampaignTrackingReceiver().onReceive(context, intent);
 }
  
 } // end of class
