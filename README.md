@@ -15,7 +15,7 @@ Don't forget when using this plugin that if an app is installed directly from Go
 
 This plugin uses [plugman](https://github.com/apache/cordova-plugman)
 
-`cordova plugins add https://github.com/8zrealestate/android-referrer-plugin`
+`cordova plugins add https://github.com/vinifig/android-referrer-plugin`
 
 ## Usage
 
